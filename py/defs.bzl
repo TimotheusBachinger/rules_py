@@ -23,7 +23,7 @@ resolutions = _resolutions
 
 def _py_binary_or_test(name, rule, srcs, main, deps = [], resolutions = {}, **kwargs):
     if type(main) not in ["string", "Label"]:
-        fail("main must be a Label or a string")
+        fail("main must be a Label or a string, not {}".format(type(main)))
 
     # Compatibility with rules_python, see docs in py_executable.bzl
     main_target = "_{}.find_main".format(name)
