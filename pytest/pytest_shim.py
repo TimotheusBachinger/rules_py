@@ -1,4 +1,7 @@
-"""A shim for executing pytest that supports test filtering, sharding, and more."""
+"""A shim for executing pytest that supports test filtering, sharding, and more.
+
+Copied from https://github.com/caseyduquettesc/rules_python_pytest/blob/331e0e511130cf4859b7589a479db6c553974abf/python_pytest/pytest_shim.py
+"""
 
 import sys
 import os
