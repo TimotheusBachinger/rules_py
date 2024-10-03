@@ -3,9 +3,9 @@
 Example:
 
 ```starlark
-load("@aspect_rules_py//pytest:defs.bzl", "pytest_test")
+load("@aspect_rules_py//pytest:defs.bzl", "py_pytest_test")
 
-pytest_test(
+py_pytest_test(
     name = "test_w_pytest",
     size = "small",
     srcs = ["test.py"],
@@ -17,7 +17,7 @@ If sharding is used (when `shard_count > 1`) then `@pip//pytest_shard` is also a
 To instead provide explicit deps for the pytest library, set `pytest_deps`:
 
 ```starlark
-pytest_test(
+py_pytest_test(
     name = "test_w_my_pytest",
     shard_count = 2,
     srcs = ["test.py"],
@@ -28,7 +28,7 @@ pytest_test(
 
 load("//py:defs.bzl", "py_test")
 
-def pytest_test(name, srcs, deps = [], args = [], pytest_deps = None, pip_repo = "pip", **kwargs):
+def py_pytest_test(name, srcs, deps = [], args = [], pytest_deps = None, pip_repo = "pip", **kwargs):
     """
     Wrapper macro for `py_test` which supports pytest.
 

@@ -1,6 +1,6 @@
-load("@aspect_rules_py//pytest:defs.bzl", "pytest_test")
+load("@aspect_rules_py//pytest:defs.bzl", "py_pytest_test")
 
-pytest_test(
+py_pytest_test(
     name = "pytest_test",
     srcs = [
         "foo_test.py",
